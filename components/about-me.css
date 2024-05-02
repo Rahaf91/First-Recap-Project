@@ -1,0 +1,8 @@
+.about__me {
+  margin-bottom: var(--marginBottom);
+  width: 70%;
+  margin: auto;
+}
+.about__me__title {
+  text-align: center;
+}

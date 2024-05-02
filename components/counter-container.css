@@ -1,0 +1,22 @@
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+}
+.counter-container__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--marginBottom);
+  gap: 10px;
+  background-color: rgba(58, 39, 24, 0.774);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px rgb(224, 140, 36);
+  /*width: 80px;*/
+}
+
+.counter-container__icon {
+  color: #fff;
+}
+.counter-container__value {
+  color: #fff;
+}

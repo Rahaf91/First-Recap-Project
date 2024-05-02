@@ -1,0 +1,60 @@
+.card {
+  flex: 100%;
+  text-align: center;
+  margin-bottom: var(--marginBottom);
+  border: 2px solid #ffa80746;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 1px 9px 10px #000000;
+  background-color: rgba(58, 39, 24, 0.774);
+  color: #fff;
+  position: relative;
+  border-left: 10px solid var(--border-box-color);
+  margin-right: 10px;
+}
+
+.card__button {
+  background-color: var(--border-box-color);
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 15px;
+  border: 1px solid whitesmoke;
+  cursor: pointer;
+}
+.card__button:hover {
+  background-color: #fff;
+  color: var(--border-box-color);
+  border: 2px solid var(--border-box-color);
+}
+
+.card__icon {
+  position: absolute;
+  right: 5px;
+  top: -5px;
+  color: var(--border-box-color);
+  cursor: pointer;
+}
+.card__icon__bookmarked {
+  color: #381f0f;
+}
+.card__tags {
+  list-style-type: none;
+  display: flex;
+  gap: 1%;
+  cursor: pointer;
+}
+.card__tag {
+  background-color: rgba(247, 190, 104, 0.192);
+  border-radius: 3px;
+  border-bottom: 1px solid #fff;
+}
+.card__tag:hover {
+  border-top: 2px solid var(--border-box-color);
+  font-size: larger;
+  box-shadow: 2px 2px 3px var(--border-box-color);
+}
+
+/*.card__answer {
+  display: none;
+}*/

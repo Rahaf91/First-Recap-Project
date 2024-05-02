@@ -1,0 +1,9 @@
+.user {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: var(--marginBottom);
+}
+.user__avatar {
+  width: 5rem;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="index.js" defer></script>
+    <script src="index1.js" defer></script>
+    <script src="form.js" defer></script>
+  </head>
+  <body data-js="body">
+    <main>
+      <header class="header">
+        <h1 class="header_title">Quiz App</h1>
+        <h2 class="header_sub_title">Check your Geografical Knowledge!</h2>
+        <img src="imgs/icons8-quizizz-100.png" />
+      </header>
+
+      <section class="card">
+        <p class="card__text">
+          What is the only country that borders the United Kingdom?
+        </p>
+        <a data-js="bookmark-click"
+          ><i
+            class="fa fa-bookmark card__icon"
+            data-js="bookmark"
+            style="font-size: 48px"
+          ></i
+        ></a>
+        <button class="card__button" type="button" data-js="show-btn">
+          Show Answer
+        </button>
+        <p class="card__text card__answer" data-js="answer">Ireland</p>
+        <ul class="card__tags">
+          <li class="card__tag">#Countries</li>
+          <li class="card__tag">#Cities</li>
+          <li class="card__tag">#Oceans</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <p class="card__text">What is The Netherlands also called?</p>
+        <i
+          class="fa fa-bookmark card__icon__bookmarked card__icon"
+          style="font-size: 48px"
+        ></i>
+
+        <button class="card__button" type="button" data-js="show-btn">
+          Show Answer
+        </button>
+        <p class="card__text card__answer" data-js="answer">Holland</p>
+        <ul class="card__tags">
+          <li class="card__tag">#Countries</li>
+          <li class="card__tag">#Cities</li>
+          <li class="card__tag">#Oceans</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <p class="card__text">
+          In which ocean would you find Pitcairn and Tahiti?
+        </p>
+        <i
+          class="fa fa-bookmark card__icon__bookmarked card__icon"
+          style="font-size: 48px"
+        ></i>
+        <button class="card__button" type="button" data-js="show-btn">
+          Show Answer
+        </button>
+        <p class="card__text card__answer" data-js="answer">
+          The (South) Pacific
+        </p>
+        <ul class="card__tags">
+          <li class="card__tag">#Countries</li>
+          <li class="card__tag">#Cities</li>
+          <li class="card__tag">#Oceans</li>
+        </ul>
+      </section>
+      <br />
+      <footer class="footer">
+        <nav class="footer__nav">
+          <a href="index.html" class="footer__link">
+            <i
+              class="fa fa-home footer__icon active"
+              style="font-size: 45px"
+            ></i>
+          </a>
+
+          <a href="bookmarks.html" class="footer__link">
+            <i class="fa fa-bookmark footer__icon" style="font-size: 45px"></i>
+          </a>
+
+          <a href="form.html" class="footer__link">
+            <i
+              class="fa fa-plus-square footer__icon"
+              aria-hidden="true"
+              style="font-size: 45px"
+            ></i>
+          </a>
+
+          <a href="profile.html" class="footer__link">
+            <i class="fa fa-user footer__icon" style="font-size: 45px"></i>
+          </a>
+        </nav>
+      </footer>
+    </main>
+  </body>
+</html>

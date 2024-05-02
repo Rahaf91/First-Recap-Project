@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body data-js="body">
+    <header class="header" data-js="header">
+      <h1 class="header_title" data-js="h1">Quiz App</h1>
+      <h2 class="header_sub_title">Check your Geografical Knowledge!</h2>
+      <img src="imgs/icons8-quizizz-100.png" />
+    </header>
+    <main>
+      <section class="user">
+        <img
+          src="https://cdn.pixabay.com/photo/2016/03/31/18/40/icons-1294545_1280.png"
+          class="user__avatar"
+        />
+        <p class="user__name">John Doe</p>
+      </section>
+
+      <section class="about__me">
+        <h2 class="about__me__title">About Me</h2>
+        <p class="about__me__description">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt
+          nihil, nam fugiat pariatur expedita, sequi tempore iusto amet dolores
+          nesciunt facilis molestiae incidunt maiores dolorum placeat labore
+          possimus numquam eum?
+        </p>
+      </section>
+
+      <section class="counter-container">
+        <div class="counter-container__item" data-js="counter">
+          <i
+            class="fa fa-question-circle counter-container__icon"
+            style="font-size: 30px"
+          ></i>
+          <p class="counter-container__value">12</p>
+        </div>
+        <div class="counter-container__item" data-js="counter">
+          <i
+            class="fa fa-bookmark counter-container__icon"
+            style="font-size: 30px"
+          ></i>
+          <p class="counter-container__value">4</p>
+        </div>
+      </section>
+
+      <section class="settings">
+        <h2 class="settings__title">Settings</h2>
+        <div class="settings__toggle">
+          <p class="settings__toggle-text">Dark mode</p>
+          <label class="settings__toggle-switch">
+            <input
+              type="checkbox"
+              class="settings__toggle-input"
+              data-js="toggle-button"
+            />
+            <span class="settings__toggle-slider"></span>
+          </label>
+        </div>
+      </section>
+      <br />
+    </main>
+
+    <footer class="footer">
+      <nav class="footer__nav">
+        <a href="index.html" class="footer__link">
+          <i class="fa fa-home footer__icon" style="font-size: 45px"></i>
+        </a>
+
+        <a href="bookmarks.html" class="footer__link">
+          <i class="fa fa-bookmark footer__icon" style="font-size: 45px"></i>
+        </a>
+        <a href="form.html" class="footer__link">
+          <i
+            class="fa fa-plus-square footer__icon"
+            aria-hidden="true"
+            style="font-size: 45px"
+          ></i>
+        </a>
+
+        <a href="profile.html" class="footer__link">
+          <i class="fa fa-user footer__icon active" style="font-size: 45px"></i>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+.footer {
+  background-color: rgba(85, 67, 56, 0.904);
+  border-radius: 10px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2; /* i add z-index bcz when submitting the form the card will overlap the footer*/
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-evenly;
+}
+.footer__icon {
+  color: var(--border-box-color);
+}
+.footer__icon:hover {
+  color: #381f0f;
+}
+.active {
+  color: #381f0f;
+  border-bottom: 3px solid #381f0f;
+}
+.active:hover {
+  border-bottom: 3px dashed #381f0f;
+}

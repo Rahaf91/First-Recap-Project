@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 1rem;
+  scroll-behavior: auto;
+  background-color: antiquewhite;
+}
+/*........Variables............*/
+:root {
+  --darkMode-color: #686464;
+  --border-box-color: rgb(243, 166, 24);
+  --marginBottom: 30px;
+}
+
+/*................DarkMode..........*/
+.dark-mode {
+  background-color: rgb(32, 19, 12);
+  color: #fff;
+}
+.dark-mode .header {
+  background-color: var(--darkMode-color);
+  border-left: 0px; /*I wanted to hide the border-left when the dark mode is activated */
+}
+
+.dark-mode .counter-container__item {
+  background-color: var(--darkMode-color);
+}
+
+.dark-mode .footer {
+  background-color: var(--darkMode-color);
+}
+
+/*...............Responsive..................*/
+@media only screen and (min-width: 900px) {
+  body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+  .footer {
+    right: 0;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .user .user__avatar {
+    width: 10rem;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 1.5rem;
+  }
+
+  .footer {
+    right: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+  .user .user__avatar {
+    width: 10rem;
+  }
+}
