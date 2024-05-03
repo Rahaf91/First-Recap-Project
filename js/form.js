@@ -4,13 +4,22 @@ const form = document.querySelector('[data-js="card-form"]');
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   console.log("Form submitted");
-  ////////////Add Elements////////////////////////
-  const cardQuestion = document.querySelector(
+
+  const formElements = event.target.elements;
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  const cardQuestion = formElements.question.value;
+  const cardAnswer = formElements.answer.value;
+  const cardTag = formElements.tag.value;
+  //const cardTag = formElements.tag.value;
+  /*const cardQuestion = document.querySelector(
     '[data-js="card-question"]'
   ).value;
   const cardAnswer = document.querySelector('[data-js="card-answer"]').value;
-  const cardTag = document.querySelector('[data-js="card-tag"]').value;
+  const cardTag = document.querySelector('[data-js="card-tag"]').value;*/
 
+  ////////////Add Elements////////////////////////
   const card = document.createElement("section");
   card.classList.add("card");
   document.body.append(card);
@@ -41,12 +50,26 @@ form.addEventListener("submit", (event) => {
   answerText.textContent = cardAnswer;
   card.append(answerText);
 
-  const tagText = document.createElement("p");
+  function createElement(cardTag) {
+    // here If the user's tag input starts with '#', the output will start with '#'. If not, then '#' will be added by default.
+    const tagText = document.createElement("p");
+    tagText.classList.add("card__tags", "card__tag");
+    if (cardTag.startsWith("#")) {
+      tagText.textContent = cardTag;
+    } else {
+      tagText.textContent = "#" + cardTag;
+    }
+    return tagText;
+  }
+  card.append(createElement(cardTag));
+
+  /*const tagText = document.createElement("p");
   tagText.classList.add("card__tags", "card__tag");
   tagText.textContent = "#" + cardTag;
-  card.append(tagText);
+  card.append(tagText);*/
+
   event.target.reset();
-  document.querySelector('[data-js="card-question"]').focus();
+  formElements.question.focus();
 });
 
 /*const input = document.querySelector('[data-js="card-question"]'); //here I tried first to target just the first textarea
