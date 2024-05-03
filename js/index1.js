@@ -26,8 +26,45 @@ showButton.addEventListener("click", () => {
 });
 
 //////////////Bookmark button///////////////////////////
-const link = document.querySelector('[ data-js="bookmark-click"]');
+/*const link = document.querySelector('[ data-js="bookmark-click"]');
 
 link.addEventListener("click", () => {
   bookmarkIcon.classList.toggle("card__icon__bookmarked");
-});
+});*/
+
+/*console.clear();
+
+////Show answer buttons////here just trying out to target all the questions in the page////////////
+const answerCards = document.querySelectorAll("[data-js='answer']");
+const showButtons = document.querySelectorAll("[data-js='show-btn']");
+const bookmarkIcon = document.querySelector("[data-js='bookmark']");
+
+function hideAnswer() {
+  answerCards.forEach(card => {
+    card.setAttribute("hidden", "");
+  });
+}
+
+function showAnswer(card, button) {
+  card.removeAttribute("hidden");
+  button.textContent = "Hide Answer";
+  bookmarkIcon.classList.add("card__icon__bookmarked");
+}
+
+function toggleAnswer(card, button) {
+  if (card.hasAttribute("hidden")) {
+    showAnswer(card, button);
+  } else {
+    card.setAttribute("hidden", "");
+    button.textContent = "Show Answer";
+  }
+}
+
+hideAnswer();
+
+showButtons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    const card = answerCards[index];
+    toggleAnswer(card, button);
+  });
+});*/

@@ -21,11 +21,11 @@ form.addEventListener("submit", (event) => {
   card.append(questionText);
 
   const bookmarkLink = document.createElement("a");
-  bookmarkLink.setAttribute("data-js", "bookmark-click");
+  bookmarkLink.classList.add("test");
 
   const bookmarkIcon = document.createElement("i");
   bookmarkIcon.classList.add("fa", "fa-bookmark", "card__icon");
-  bookmarkIcon.setAttribute("data-js", "bookmark");
+
   bookmarkIcon.style.fontSize = "48px";
 
   bookmarkLink.append(bookmarkIcon);
