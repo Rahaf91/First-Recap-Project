@@ -25,13 +25,6 @@ showButton.addEventListener("click", () => {
   }
 });
 
-//////////////Bookmark button///////////////////////////
-/*const link = document.querySelector('[ data-js="bookmark-click"]');
-
-link.addEventListener("click", () => {
-  bookmarkIcon.classList.toggle("card__icon__bookmarked");
-});*/
-
 /*console.clear();
 
 ////Show answer buttons////here just trying out to target all the questions in the page////////////

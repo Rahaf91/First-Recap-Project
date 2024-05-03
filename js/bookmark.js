@@ -1,6 +1,7 @@
-// bookmark.js
+// here it targets all bookmarks
+//bookmark.js
 
-function setupBookmarkToggle() {
+function BookmarkToggle() {
   const sections = document.querySelectorAll("section");
 
   sections.forEach((section) => {
@@ -15,4 +16,11 @@ function setupBookmarkToggle() {
 }
 
 // Call the function to set up the bookmark toggle on page load
-setupBookmarkToggle();
+BookmarkToggle();
+
+//////////////Bookmark button//////////Here it targets the first card/////////////////
+/*const link = document.querySelector('[ data-js="bookmark-click"]');
+
+link.addEventListener("click", () => {
+  bookmarkIcon.classList.toggle("card__icon__bookmarked");
+});*/
