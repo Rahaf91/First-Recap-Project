@@ -1,0 +1,51 @@
+.textarea-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+textarea,
+input {
+  align-self: center;
+  width: 50%;
+}
+
+.remaining-characters {
+  align-self: flex-end;
+  margin-right: 25%;
+  color: rgb(124, 124, 124);
+  font-size: 10px;
+}
+
+.form {
+  margin-bottom: 50px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.form__button {
+  margin-top: 10px;
+  align-self: center;
+  border-radius: 5px;
+  background-color: rgba(85, 67, 56, 0.904);
+  color: rgb(247, 189, 104);
+  text-shadow: 2px 2px 4px rgb(231, 153, 6);
+}
+
+fieldset {
+  border: 2px solid rgb(243, 166, 24);
+}
+legend {
+  border-radius: 5px;
+  background-color: rgba(85, 67, 56, 0.904);
+  color: rgb(247, 189, 104);
+  text-shadow: 2px 2px 4px rgb(231, 153, 6);
+}
+textarea,
+input {
+  background-color: rgb(235, 211, 166);
+  border: 1px solid rgb(22, 13, 0);
+}
+input {
+  padding: 10px;
+}
