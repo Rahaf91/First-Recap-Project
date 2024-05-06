@@ -82,13 +82,13 @@ input.addEventListener("input", (event) => {
  
 });*/
 
-const textAreas = form.querySelectorAll('textarea[data-js^="card"]'); //This method is to target all textareas in the form that starts with data-js="card"
+const textAreas = form.querySelectorAll('textarea[data-js^="card"]');
 const maxCharacters = 150;
 
 textAreas.forEach((textarea) => {
   const charactersLeftElement = textarea.nextElementSibling.querySelector(
     '[data-js="remaining-characters"]'
-  ); // here I wanted to target the span element with data-js="remaining-characters"
+  );
 
   textarea.addEventListener("input", (event) => {
     const numberOfCharsEntered = event.target.value.length;
