@@ -61,7 +61,12 @@ form.addEventListener("submit", (event) => {
 
   const tagText = document.createElement("p");
   tagText.classList.add("card__tag");
-  tagText.textContent = cardTag;
+  if (cardTag.startsWith("#")) {
+    tagText.textContent = cardTag;
+  } else {
+    tagText.textContent = "#" + cardTag;
+  }
+
   newCard.append(tagText);
 
   event.target.reset();
