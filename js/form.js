@@ -12,61 +12,57 @@ form.addEventListener("submit", (event) => {
   const cardQuestion = formElements.question.value;
   const cardAnswer = formElements.answer.value;
   const cardTag = formElements.tag.value;
-  //const cardTag = formElements.tag.value;
-  /*const cardQuestion = document.querySelector(
-    '[data-js="card-question"]'
-  ).value;
-  const cardAnswer = document.querySelector('[data-js="card-answer"]').value;
-  const cardTag = document.querySelector('[data-js="card-tag"]').value;*/
 
   ////////////Add Elements////////////////////////
-  const card = document.createElement("section");
-  card.classList.add("card");
-  document.body.append(card);
+  const newCard = document.createElement("section");
+  newCard.classList.add("card");
+  newCard.dataset.js = "card";
+  document.body.append(newCard);
 
-  const questionText = document.createElement("p");
-  questionText.classList.add("card__text");
-  questionText.textContent = cardQuestion;
-  card.append(questionText);
+  const cardText = document.createElement("p");
+  cardText.classList.add("card__text");
+  cardText.textContent = cardQuestion;
+  newCard.append(cardText);
 
   const bookmarkLink = document.createElement("a");
   bookmarkLink.classList.add("test");
-
   const bookmarkIcon = document.createElement("i");
   bookmarkIcon.classList.add("fa", "fa-bookmark", "card__icon");
-
+  bookmarkIcon.dataset.js = "bookmark";
   bookmarkIcon.style.fontSize = "48px";
-
   bookmarkLink.append(bookmarkIcon);
-  card.append(bookmarkIcon);
+  newCard.append(bookmarkLink);
 
-  const cardButton = document.createElement("button");
-  cardButton.classList.add("card__button");
-  cardButton.textContent = "show Answer";
-  card.append(cardButton);
+  // Add the show answer button
+  const showAnswerButton = document.createElement("button");
+  showAnswerButton.classList.add("card__button");
+  showAnswerButton.type = "button";
+  showAnswerButton.dataset.js = "show-btn";
+  showAnswerButton.textContent = "Show Answer";
+  newCard.append(showAnswerButton);
 
   const answerText = document.createElement("p");
   answerText.classList.add("card__text", "card__answer");
+  answerText.dataset.js = "answer";
+  answerText.hidden = true;
   answerText.textContent = cardAnswer;
-  card.append(answerText);
+  newCard.append(answerText);
+  bookmarkIcon.addEventListener("click", () => {
+    bookmarkIcon.classList.toggle("card__icon__bookmarked");
+  });
 
-  function createElement(cardTag) {
-    // here If the user's tag input starts with '#', the output will start with '#'. If not, then '#' will be added by default.
-    const tagText = document.createElement("p");
-    tagText.classList.add("card__tags", "card__tag");
-    if (cardTag.startsWith("#")) {
-      tagText.textContent = cardTag;
+  showAnswerButton.addEventListener("click", () => {
+    if (answerText.hasAttribute("hidden")) {
+      answerText.removeAttribute("hidden");
     } else {
-      tagText.textContent = "#" + cardTag;
+      answerText.setAttribute("hidden", "");
     }
-    return tagText;
-  }
-  card.append(createElement(cardTag));
+  });
 
-  /*const tagText = document.createElement("p");
-  tagText.classList.add("card__tags", "card__tag");
-  tagText.textContent = "#" + cardTag;
-  card.append(tagText);*/
+  const tagText = document.createElement("p");
+  tagText.classList.add("card__tag");
+  tagText.textContent = cardTag;
+  newCard.append(tagText);
 
   event.target.reset();
   formElements.question.focus();
@@ -82,8 +78,8 @@ input.addEventListener("input", (event) => {
  
 });*/
 
-const textAreas = form.querySelectorAll('textarea[data-js^="card"]');
-const maxCharacters = 150;
+/*const textAreas = form.querySelectorAll('textarea[data-js^="card"]');
+const maxCharacters = formElements.textArea.getAttribute("maxlength");
 
 textAreas.forEach((textarea) => {
   const charactersLeftElement = textarea.nextElementSibling.querySelector(
@@ -95,12 +91,24 @@ textAreas.forEach((textarea) => {
     charactersLeftElement.textContent = maxCharacters - numberOfCharsEntered;
   });
 });
+*/
 
-form.addEventListener("submit", () => {
-  textAreas.forEach((textarea) => {
-    const charactersLeftElement = textarea.nextElementSibling.querySelector(
-      '[data-js="remaining-characters"]'
-    );
-    charactersLeftElement.textContent = maxCharacters;
+document.querySelectorAll('textarea[data-js^="card"]').forEach((textarea) => {
+  const amountLeft = textarea.nextElementSibling.querySelector(
+    '[data-js="amountLeft"]'
+  );
+  const maxLength = textarea.getAttribute("maxlength");
+
+  const updateAmountLeft = () => {
+    amountLeft.innerText = maxLength - textarea.value.length;
+  };
+
+  updateAmountLeft();
+
+  textarea.addEventListener("input", () => {
+    updateAmountLeft(maxLength - textarea.value.length);
+  });
+  textarea.form.addEventListener("submit", () => {
+    amountLeft.textContent = maxLength;
   });
 });

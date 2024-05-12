@@ -1,6 +1,7 @@
 console.clear();
+
 ////Show answer button////////////////
-const answerCard = document.querySelector("[data-js='answer']");
+/*const answerCard = document.querySelector("[data-js='answer']");
 const showButton = document.querySelector("[data-js='show-btn']");
 const bookmarkIcon = document.querySelector("[data-js='bookmark']");
 
@@ -18,19 +19,19 @@ showButton.addEventListener("click", () => {
   if (answerCard.hasAttribute("hidden")) {
     showAnswer();
     showButton.textContent = "Hide Answer";
-    bookmarkIcon.classList.add("card__icon__bookmarked");
+    //bookmarkIcon.classList.add("card__icon__bookmarked");
   } else {
     hideAnswer();
     showButton.textContent = "Show Answer";
   }
-});
+});*/
 
 /*console.clear();
 
 ////Show answer buttons////here just trying out to target all the questions in the page////////////
 const answerCards = document.querySelectorAll("[data-js='answer']");
 const showButtons = document.querySelectorAll("[data-js='show-btn']");
-const bookmarkIcon = document.querySelector("[data-js='bookmark']");
+
 
 function hideAnswer() {
   answerCards.forEach(card => {

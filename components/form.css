@@ -10,7 +10,7 @@ input {
   width: 50%;
 }
 
-.remaining-characters {
+.amount__left {
   align-self: flex-end;
   margin-right: 25%;
   color: rgb(124, 124, 124);
