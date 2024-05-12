@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="./js/index.js" defer></script>
+    <script src="./js/index1.js" defer></script>
+    <script src="./js/form.js" defer></script>
+    <script src="./js/bookmark.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header_title">Quiz App</h1>
+      <h2 class="header_sub_title">Check your Geografical Knowledge!</h2>
+      <img src="imgs/icons8-quizizz-100.png" />
+    </header>
+    <form data-js="card-form" class="form">
+      <fieldset>
+        <legend>Add Your Card</legend>
+        <p><strong>Your Question</strong></p>
+        <div class="textarea-container">
+          <label for="question"></label>
+          <textarea
+            id="question"
+            name="question"
+            data-js="card-question"
+            maxlength="150"
+            required
+          ></textarea>
+          <p class="amount__left">
+            <span data-js="amountLeft">150</span> characters left
+          </p>
+        </div>
+        <p><strong>Your Answer</strong></p>
+        <div class="textarea-container">
+          <label for="answer"></label>
+          <textarea
+            id="answer"
+            name="answer"
+            data-js="card-answer"
+            maxlength="150"
+            required
+          ></textarea>
+          <p class="amount__left">
+            <span data-js="amountLeft">150</span> characters left
+          </p>
+        </div>
+        <p><strong>Tag</strong></p>
+        <label for="tag"></label>
+        <input type="text" id="tag" name="tag" data-js="card-tag" required />
+      </fieldset>
+      <button type="submit" class="form__button">Submit</button>
+    </form>
+
+    <footer class="footer">
+      <nav class="footer__nav">
+        <a href="index.html" class="footer__link">
+          <i class="fa fa-home footer__icon" style="font-size: 45px"></i>
+        </a>
+
+        <a href="bookmarks.html" class="footer__link">
+          <i class="fa fa-bookmark footer__icon" style="font-size: 45px"></i>
+        </a>
+        <a href="form.html" class="footer__link">
+          <i
+            class="fa fa-plus-square footer__icon active"
+            aria-hidden="true"
+            style="font-size: 45px"
+          ></i>
+        </a>
+        <a href="profile.html" class="footer__link">
+          <i class="fa fa-user footer__icon" style="font-size: 45px"></i>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>

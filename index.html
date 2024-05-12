@@ -9,9 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script src="index.js" defer></script>
-    <script src="index1.js" defer></script>
-    <script src="form.js" defer></script>
+    <script src="./js/index.js" defer></script>
+    <script src="./js/index1.js" defer></script>
+    <script src="./js/form.js" defer></script>
+    <script src="./js/bookmark.js" defer></script>
   </head>
   <body data-js="body">
     <main>
@@ -21,11 +22,11 @@
         <img src="imgs/icons8-quizizz-100.png" />
       </header>
 
-      <section class="card">
+      <section class="card" data-js="card">
         <p class="card__text">
           What is the only country that borders the United Kingdom?
         </p>
-        <a data-js="bookmark-click"
+        <a data-js="bookmark-click" class="test"
           ><i
             class="fa fa-bookmark card__icon"
             data-js="bookmark"
@@ -35,7 +36,7 @@
         <button class="card__button" type="button" data-js="show-btn">
           Show Answer
         </button>
-        <p class="card__text card__answer" data-js="answer">Ireland</p>
+        <p class="card__text card__answer" data-js="answer" hidden>Ireland</p>
         <ul class="card__tags">
           <li class="card__tag">#Countries</li>
           <li class="card__tag">#Cities</li>
@@ -43,17 +44,19 @@
         </ul>
       </section>
 
-      <section class="card">
+      <section class="card" data-js="card">
         <p class="card__text">What is The Netherlands also called?</p>
-        <i
-          class="fa fa-bookmark card__icon__bookmarked card__icon"
-          style="font-size: 48px"
-        ></i>
+        <a data-js="bookmark-click" class="test"
+          ><i
+            class="fa fa-bookmark card__icon__bookmarked card__icon"
+            style="font-size: 48px"
+          ></i
+        ></a>
 
         <button class="card__button" type="button" data-js="show-btn">
           Show Answer
         </button>
-        <p class="card__text card__answer" data-js="answer">Holland</p>
+        <p class="card__text card__answer" data-js="answer" hidden>Holland</p>
         <ul class="card__tags">
           <li class="card__tag">#Countries</li>
           <li class="card__tag">#Cities</li>
@@ -61,18 +64,20 @@
         </ul>
       </section>
 
-      <section class="card">
+      <section class="card" data-js="card">
         <p class="card__text">
           In which ocean would you find Pitcairn and Tahiti?
         </p>
-        <i
-          class="fa fa-bookmark card__icon__bookmarked card__icon"
-          style="font-size: 48px"
-        ></i>
+        <a data-js="bookmark-click" class="test"
+          ><i
+            class="fa fa-bookmark card__icon__bookmarked card__icon"
+            style="font-size: 48px"
+          ></i
+        ></a>
         <button class="card__button" type="button" data-js="show-btn">
           Show Answer
         </button>
-        <p class="card__text card__answer" data-js="answer">
+        <p class="card__text card__answer" data-js="answer" hidden>
           The (South) Pacific
         </p>
         <ul class="card__tags">
